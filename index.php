@@ -14,7 +14,16 @@ $bad_word = str_replace('PHP', "***", $input_text);
 </head>
 
 <body>
-    <h1><?= $bad_word; ?></h1>
+    <div>
+        <h1>The entered text is :<?= " " . $input_text; ?></h1>
+        <h3>With a length of: <?= " " . strlen(trim($input_text)) ?> characters</h3>
+    </div>
+
+    <div>
+        <h1>The censored text is: <?= " " . $bad_word; ?></h1>
+        <h3>With a length of: <?= " " . strlen(trim($bad_word)) ?> characters</h3>
+    </div>
+
 </body>
 
 </html>

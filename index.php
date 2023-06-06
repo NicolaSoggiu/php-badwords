@@ -1,6 +1,8 @@
 <?php
 $input_text = $_GET["text"];
 $bad_word = str_replace('PHP', "***", $input_text);
+$lenght = strlen(trim($input_text));
+$bad_lenght = strlen(trim($bad_word));
 ?>
 
 <!DOCTYPE html>
@@ -16,12 +18,12 @@ $bad_word = str_replace('PHP', "***", $input_text);
 <body>
     <div>
         <h1>The entered text is :<?= " " . $input_text; ?></h1>
-        <h3>With a length of: <?= " " . strlen(trim($input_text)) ?> characters</h3>
+        <h3>With a length of: <?= " " . $lenght; ?> characters</h3>
     </div>
 
     <div>
         <h1>The censored text is: <?= " " . $bad_word; ?></h1>
-        <h3>With a length of: <?= " " . strlen(trim($bad_word)) ?> characters</h3>
+        <h3>With a length of: <?= " " . $bad_lenght ?> characters</h3>
     </div>
 
 </body>
